@@ -1,5 +1,7 @@
 # ignore all converted models
 *.onnx
+*.pth
+*.engine
 
 # ignore venvs
 venv/*
