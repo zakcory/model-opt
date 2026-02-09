@@ -1,0 +1,12 @@
+# ignore all converted models
+*.onnx
+
+# ignore venvs
+venv/*
+.venv/*
+
+# ignore uv lock
+*.lock
+
+# ignore the source code
+sources/dinov3/*
