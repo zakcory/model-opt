@@ -23,7 +23,7 @@ docker compose -f "$COMPOSE_FILE" run --pull always --rm \
     cd /tmp && \
 
     # 2. Create directory for DinoV3-512 and run conversion
-    echo '\n\n==================Converting DinoV3-512...==================\n\n' && \
+    echo $'\n\n==================Converting DinoV3-512...==================\n\n' && \
     /usr/src/tensorrt/bin/trtexec \
       --onnx=sources/models/onnx/dinov3_vitb16-fp32-512.onnx \
       --saveEngine=sources/models/trt/dinov3_vitb16-512.engine \
@@ -33,7 +33,7 @@ docker compose -f "$COMPOSE_FILE" run --pull always --rm \
       --maxShapes=images:16x3x512x512 \
 
     # 4. Create directory for DinoV3-112 and run conversion
-    echo '\n\n==================Converting DinoV3-112...==================\n\n' && \
+    echo $'\n\n==================Converting DinoV3-112...==================\n\n' && \
     /usr/src/tensorrt/bin/trtexec \
       --onnx=sources/models/onnx/dinov3_vitb16-fp32-112.onnx \
       --saveEngine=sources/models/trt/dinov3_vitb16-112.engine \
@@ -43,4 +43,4 @@ docker compose -f "$COMPOSE_FILE" run --pull always --rm \
       --maxShapes=images:16x3x112x112 \
   "
 
-echo "\n\n\n\n==================Conversion complete!=================="
+echo $"\n\n==================Conversion complete!==================\n\n"
