@@ -2,8 +2,8 @@
 The following folder contains scripts that involve converting the raw `.pth` model you got, to a format that is the most performant in a production system. We essentially want to get the fastest inference time, with minimal accuracy loss.
 
 We first need to convert our model from `.pth` to `.onnx`, which is a universal format for machine learning models.
-The conversion will result with model_**fp16** and model_**fp32** files, which represent the same model with different datatype formats. <br>
-**FP16** Models are essentially very close in accuracy(for inference) and are much lighter and faster to run, and it is recommanded to use. 
+The conversion will result with the FP16 version of the model. <br>
+**FP16** Models are essentially very close in accuracy (for inference) and are much lighter and faster to run, and it is recommended to use. 
 
 Next, we would be converting the `.onnx` file we have to `.engine`, using NVIDIA's TensorRT tool.<br>
 TensorRT compiles a model for your specific achitecture(one used at time of compilation), therefore making it very efficient when running on your machine.<br>
