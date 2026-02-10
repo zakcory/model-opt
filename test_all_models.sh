@@ -11,5 +11,5 @@ echo -e "\n\n==================Testing the 512 optimized engine=================
 /usr/src/tensorrt/bin/trtexec --loadEngine=sources/models/trt/dinov3_vitb16-512.engine --shapes=images:1x3x512x512 --dumpOutput
 
 echo -e "\n\n==================Testing the 112 optimized engine==================\n\n"
-/usr/src/tensorrt/bin/trtexec --loadEngine=sources/models/trt/dinov3_vitb16-112.engine --shapes=images:1x3x224x224 --dumpOutput
+/usr/src/tensorrt/bin/trtexec --loadEngine=sources/models/trt/dinov3_vitb16-112.engine --shapes=images:1x3x112x112 --dumpOutput
 '
