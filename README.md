@@ -59,5 +59,5 @@ To test performance of TRT model optimized for the shape `{SHAPE}`, run the foll
 Before running the `trtexec` commands, make sure you are in the triton container.
 You can start the container with [docker-compose-triton.yml](docker-compose-triton.yml) by running:
 ```bash
-docker compose -f docker-compose-triton.yml run --pull always --rm -v "./:/tmp --remove-orphans triton_server bash
+docker compose -f docker-compose-triton.yml run --pull always --rm -v "./:/tmp" --remove-orphans triton_server bash
 ```
