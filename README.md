@@ -41,9 +41,9 @@ To convert the model from `.onnx` to `.engine` optimized for the shape `{SHAPE}`
   --onnx={ONNX_PATH} \
   --saveEngine={ENGINE_PATH} \
   --fp16 \
-  --minShapes=images:1x3x512x512 \
-  --optShapes=images:8x3x512x512 \
-  --maxShapes=images:16x3x512x512 \
+  --minShapes=images:1x3x{SHAPE}x{SHAPE} \
+  --optShapes=images:8x3x{SHAPE}x{SHAPE} \
+  --maxShapes=images:16x3x{SHAPE}x{SHAPE} \
 ```
 After running the command above, the `.engine` model will be saved to `sources/models/engine` with the name `{ENGINE_PATH}`
 
