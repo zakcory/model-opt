@@ -38,9 +38,9 @@ docker compose -f "$COMPOSE_FILE" run --pull always --rm \
       --onnx=sources/models/onnx/dinov3_vitb16-fp32-112.onnx \
       --saveEngine=sources/models/trt/dinov3_vitb16-112.engine \
       --fp16 \
-      --minShapes=images:1x3x224x224 \
-      --optShapes=images:8x3x224x224 \
-      --maxShapes=images:16x3x224x224 \
+      --minShapes=images:1x3x112x112 \
+      --optShapes=images:8x3x112x112 \
+      --maxShapes=images:16x3x112x112 \
   "
 
 echo "Conversion complete."

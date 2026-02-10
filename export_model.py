@@ -7,7 +7,7 @@ import onnx
 from onnxconverter_common import float16
 
 # Custom modules
-from export_utils import ModelType, get_dinov3_model, get_yolov9_model, remove_training_nodes, clean_unused_weights
+from export_utils import ModelType, get_dinov3_model, get_yolov9_model
 
 def export_model(
     model_name: str,

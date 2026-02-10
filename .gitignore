@@ -9,6 +9,3 @@ venv/*
 
 # ignore uv lock
 *.lock
-
-# ignore the source code
-sources/dinov3/*
