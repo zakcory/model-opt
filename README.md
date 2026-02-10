@@ -61,3 +61,4 @@ You can start the container with [docker-compose-triton.yml](docker-compose-trit
 ```bash
 docker compose -f docker-compose-triton.yml run --pull always --rm -v "./:/tmp" --remove-orphans triton_server bash
 ```
+After being inside the container, run: `cd /tmp`. From there, you should be good!
