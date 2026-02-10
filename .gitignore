@@ -9,3 +9,4 @@ venv/*
 
 # ignore uv lock
 *.lock
+*.pyc
