@@ -21,13 +21,13 @@ def export_model(
     """
     Exports a given model to ONNX format with both FP32 and FP16 versions.
     """
-    print(f"Exporting model: {model_name}")
+    print(f"\n\n==================Exporting model: {model_name}==================\n\n")
 
     # Send model to device
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = model.to(device)
     dummy_input = dummy_input.to(device)
-    print(f"Using device: {device}")
+    print(f"==================Using device: {device}==================")
     
     # Define output paths
     onnx_models_path = "sources/"
@@ -52,7 +52,7 @@ def export_model(
         dynamo=False
     )
     model_fp32 = onnx.load(path_fp32)
-    print("FP32 export successful")
+    print(f"\n\n==================FP32 export successful==================\n\n")
     
     # Validate and save
     try:
